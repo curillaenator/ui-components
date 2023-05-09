@@ -11,7 +11,13 @@ export const App = () => {
     'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus est excepturi quas illo eaque optio, nam, ea officiis porro iusto doloremque dolores? Laudantium animi blanditiis numquam cum harum minima quas quae facere nemo consequuntur quia, repudiandae accusamus fuga.';
 
   return (
-    <div style={{ width: '100vw', minHeight: '100vh', padding: '64px' }}>
+    <div
+      style={{
+        // width: '100vw',
+        minHeight: '100vh',
+        padding: '64px',
+      }}
+    >
       <h1 style={{ marginBottom: 32 }}>Hello! Click open, pls</h1>
 
       <button
@@ -49,12 +55,13 @@ export const App = () => {
           }}
         >
           <h2 style={{ marginBottom: 32 }}>Dialog</h2>
-          <p style={{ marginBottom: 32 }}>{lorem.repeat(40)}</p>
+
           <button
             onClick={closeDialog}
             style={{
               height: '48px',
               padding: '0 16px',
+              marginBottom: '32px',
               border: 'none',
               borderRadius: '8px',
               cursor: 'pointer',
@@ -68,6 +75,8 @@ export const App = () => {
           >
             Close
           </button>
+
+          <p>{lorem.repeat(40)}</p>
         </Scroll>
       </Dialog>
     </div>
