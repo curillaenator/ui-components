@@ -1,0 +1,29 @@
+{
+  "name": "@components-ui/dialog",
+  "version": "0.0.1",
+  "description": "Dialog component",
+  "license": "UNLICENSED",
+  "sideEffects": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "type": "git"
+  },
+  "main": "src/index",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "@components-ui/common-types": "1.0.0"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "files": [
+    "/build"
+  ]
+}

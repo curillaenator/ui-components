@@ -1,0 +1,43 @@
+$animationTime: 0.2s;
+
+.dialog {
+  --dialog-pd: 32px 32px;
+  --dialog-bdrs: 16px;
+  --dialog-bdw: 2px;
+  --dialog-bdc: var(--color-neutral-200);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: var(--dialog-pd);
+  border: var(--dialog-bdw) solid var(--dialog-bdc);
+  border-radius: var(--dialog-bdrs);
+  color: var(--color-neutral-700);
+  transition: opacity $animationTime ease-in-out;
+
+  &:modal {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  &_open {
+    opacity: 1;
+
+    &::backdrop {
+      background: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+
+  &_closed {
+    opacity: 0;
+
+    &::backdrop {
+      background: transparent;
+    }
+  }
+
+  &::backdrop {
+    transition: $animationTime ease-in-out;
+  }
+}

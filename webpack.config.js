@@ -15,9 +15,7 @@ module.exports = {
     historyApiFallback: true,
   },
 
-  entry: {
-    index: { import: './src/index.tsx' },
-  },
+  entry: './src/index.tsx',
 
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -39,6 +37,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, './src/assets'), to: '' }],
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
     }),
     new CleanWebpackPlugin(),
     // new Dotenv(),

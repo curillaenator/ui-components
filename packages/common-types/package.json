@@ -1,0 +1,45 @@
+{
+  "name": "@components-ui/common-types",
+  "description": "Common types for components",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "main": "src/index",
+  "types": "src/index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "main": "build/index",
+    "types": "build/index.d.ts",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "run -T rimraf build && cp -R src build",
+    "build:watch": "cp -R src build",
+    "test": "run -T pcbl-fe  test",
+    "checkDep": "run -T pcbl-fe  checkDependencies",
+    "pack": "run -T pcbl-fe  pack",
+    "revertPack": "run -T pcbl-fe  revertPack",
+    "clean": "run -T pcbl-fe  clean"
+  },
+  "files": [
+    "/build"
+  ],
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1"
+  },
+  "peerDependencies": {
+    "@testing-library/dom": "*",
+    "@testing-library/jest-dom": "*",
+    "@testing-library/react": "*",
+    "@testing-library/react-hooks": "*",
+    "@testing-library/user-event": "*",
+    "jest": "*",
+    "jest-canvas-mock": "*",
+    "jest-fetch-mock": "*",
+    "react": "*",
+    "react-dom": "*",
+    "ts-jest": "*"
+  },
+  "type": "git"
+}

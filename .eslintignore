@@ -2,3 +2,5 @@ node_modules
 build
 .eslintrc.json
 webpack.config.js
+*.config.js
+packages/*
