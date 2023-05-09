@@ -15,7 +15,7 @@ export const useDialog = (id?: string) => {
     const { current: dialog } = ref;
 
     setOpen(false);
-    setTimeout(() => dialog?.close(), 200);
+    setTimeout(() => dialog?.close(), 200); // время нужно такое же как в стилях $animationTime.
   }, []);
 
   useLayoutEffect(() => {
