@@ -1,0 +1,32 @@
+.container {
+  &::-webkit-scrollbar {
+    width: 8px;
+
+    &:horizontal {
+      height: 8px;
+    }
+
+    &-thumb {
+      background-color: var(--color-neutral-300);
+      width: 8px;
+      border-radius: 4px;
+
+      &:horizontal {
+        height: 8px;
+      }
+
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+
+    &-track {
+      background-color: var(--color-neutral-200);
+      border-radius: 4px;
+
+      &:hover {
+        background-color: var(--color-neutral-200);
+      }
+    }
+  }
+}

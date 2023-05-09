@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Dialog, useDialog } from './components/dialog';
+import { Dialog, useDialog, Scroll } from './components';
 
 const DIALOG_ID = 'dialog-tag-testing'; // пока не задействован
 
@@ -39,7 +39,7 @@ export const App = () => {
       <p>{lorem.repeat(40)}</p>
 
       <Dialog id={DIALOG_ID} ref={modalRef} open={open}>
-        <div
+        <Scroll
           style={{
             paddingRight: '16px',
             maxHeight: 'calc(100vh - 128px - 64px)',
@@ -68,7 +68,7 @@ export const App = () => {
           >
             Close
           </button>
-        </div>
+        </Scroll>
       </Dialog>
     </div>
   );
