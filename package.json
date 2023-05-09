@@ -1,5 +1,5 @@
 {
-  "name": "react-ui-packages",
+  "name": "ui-packages",
   "version": "0.0.1-alpha",
   "description": "Set of react ui components",
   "main": "./src/index.ts",
